@@ -151,7 +151,7 @@ CTEs, window functions (`ROW_NUMBER`, `RANK`, `LAG`, running totals,STDDEV), mul
 
 ## Author
 
-Sreemathi.K |www.linkedin.com/in/sreemathi-k-3baa60202| ksreemathi5@gmail.com
+Sreemathi.K |www.linkedin.com/in/sreemathi-k-3baa60202 | ksreemathi5@gmail.com
 
 
 
