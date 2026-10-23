@@ -4,7 +4,7 @@
 
 **Answer:** **14.6%** of gross revenue (1.83M of 12.60M on delivered orders) leaks through discounts, refunds, logistics and payment fees. Discounts alone account for **58%** of the leakage. Counting anomalies outside the core definition, the exposure is about **18%**.
 
-> Amounts are in the dataset's currency units (currency is not specified). The data is simulated, see [Limitations](#limitations).
+> Amounts are in the dataset's currency units (currency is not specified). The data is simulated; see [Limitations](#limitations).
 
 ---
 
@@ -127,8 +127,8 @@ Scenarios (assumption-based, not forecasts): **conservative about 178k (1.4 poin
 ```
 /data        source CSV files
 /sql
-  01_raw_tables.sql
-  02_clean_layer.sql
+  01_create_raw_tables.sql
+  02_cleaning_data.sql
   03_revenue_leakage_view.sql
   04_analysis_queries.sql
   05_profit_analysis_queries.sql
@@ -141,14 +141,17 @@ README.md
 ## How to run
 
 1. Use MySQL 8.0 or later (the project uses CTEs and window functions).
-2. Create the database and load the six CSV files into the `raw_` tables (`01_raw_tables.sql`).
-3. Run `02_clean_layer.sql`, then `03_revenue_leakage_view.sql`.
+2. Create the database and load the six CSV files into the `raw_` tables (`01_create_raw_tables.sql`).
+3. Run `02_cleaning_data.sql`, then `03_revenue_leakage_view.sql`.
 4. Run the validation checks (row counts, discount and shipping totals tie to source), then `04_analysis_queries.sql`.
 
 ## SQL skills demonstrated
 
-CTEs, window functions (`ROW_NUMBER`, `RANK`, `LAG`, running totals,stddev), multi-table joins with fan-out control, `EXISTS`, conditional aggregation (`CASE`), views, data cleaning and validation, reconciliation checks, regex-based type validation.
+CTEs, window functions (`ROW_NUMBER`, `RANK`, `LAG`, running totals,STDDEV), multi-table joins with fan-out control, `EXISTS`, conditional aggregation (`CASE`), views, data cleaning and validation, reconciliation checks, regex-based type validation.
 
 ## Author
 
 Sreemathi.K |www.linkedin.com/in/sreemathi-k-3baa60202| ksreemathi5@gmail.com
+
+
+
