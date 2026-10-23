@@ -33,7 +33,7 @@ clean_*  (typed, standardized)  +  dq_quarantine  (every issue logged with its r
 revenue_leakage  (view, exactly one row per order)
    |
    v
-analysis queries (waterfall, category, trend, Pareto, discounts, refunds, fees,profit)
+analysis queries (waterfall, category, trend, Pareto, discounts, refunds, fees, profit)
 ```
 
 Design choices that matter:
@@ -147,7 +147,7 @@ README.md
 
 ## SQL skills demonstrated
 
-CTEs, window functions (`ROW_NUMBER`, `RANK`, `LAG`, running totals,STDDEV), multi-table joins with fan-out control, `EXISTS`, conditional aggregation (`CASE`), views, data cleaning and validation, reconciliation checks, regex-based type validation.
+CTEs, window functions (`ROW_NUMBER`, `RANK`, `LAG`, running totals, STDDEV), multi-table joins with fan-out control, `EXISTS`, conditional aggregation (`CASE`), views, data cleaning and validation, reconciliation checks, regex-based type validation.
 
 ## Author
 
